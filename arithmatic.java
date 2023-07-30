@@ -2,7 +2,7 @@
 
 import java.util.Scanner;
 
-public class arithmatic {
+public class arithmatic{
     public static void main(String[] args) {
         int choice = 0;
         float result = 0;
@@ -16,7 +16,7 @@ public class arithmatic {
         while (true) {
             System.out.println("enter operator to continue and 0 to exit ");
             String opt = sc.next();
-            if (opt.equals("+")) {
+            if (opt.equals("+")){
                 choice = 1;
             }
            else if (opt.equals("-")){
