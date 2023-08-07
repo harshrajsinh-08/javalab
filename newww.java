@@ -1,30 +1,39 @@
 import java.util.Scanner;
+import java.io.*;
 
-public class newww {
-    public static boolean isPrime(int num) {
-        if (num <= 1) {
-            return false;
-        }
+// Java Program to Find the minimum
+// distance between two numbers
 
-        for (int i = 2; i <= Math.sqrt(num); i++) {
-            if (num % i == 0) {
-                return false;
-            }
-        }
+class newww {
+	int minDist(int arr[], int n, int x, int y)
+	{
+		int i, j;
+		int min_dist = Integer.MAX_VALUE;
+		for (i = 0; i < n; i++) {
+			for (j = i + 1; j < n; j++) {
+				if ((x == arr[i] && y == arr[j]
+					|| y == arr[i] && x == arr[j])
+					&& min_dist > Math.abs(i - j))
+					min_dist = Math.abs(i - j);
+			}
+		}
+		if (min_dist > n) {
+			return -1;
+		}
+		return min_dist;
+	}
 
-        return true;
-    }
+	public static void main(String[] args)
+	{
+        Scanner sc = new Scanner(System.in);
+		newww min = new newww();
+		int arr[] = { 3, 5, 4, 2, 6, 5, 6, 6, 5, 4, 8, 3 };
+		int n = arr.length;
+		int x = sc.nextInt() ;
+		int y = sc.nextInt();
 
-    public static void twinpr() {
-        for (int i = 3; i < 100; i++) {
-            if (isPrime(i) && isPrime(i + 2)) {
-                System.out.println("(" + i + ", " + (i + 2) + ")");
-            }
-        }
-    }
-
-    public static void main(String[] args) {
-        System.out.println("Twin Prime Pairs:");
-        twinpr();
-    }
+		System.out.println("Minimum distance between " + x
+						+ " and " + y + " is "
+						+ min.minDist(arr, n, x, y));
+	}
 }
