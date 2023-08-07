@@ -1,15 +1,13 @@
 import java.util.Scanner;
 
 public class newww {
-    public static boolean isPIN(String pin) {
-        int length = pin.length();
-        
-        if (length != 4 && length != 6 && length != 8) {
+    public static boolean isPrime(int num) {
+        if (num <= 1) {
             return false;
         }
 
-        for (int i = 0; i < length; i++) {
-            if (Character.isDigit(pin.charAt(i)) == false) {
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
                 return false;
             }
         }
@@ -17,18 +15,16 @@ public class newww {
         return true;
     }
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Enter a PIN: ");
-        String pin = scanner.nextLine();
-
-        if (isPIN(pin)) {
-            System.out.println("Valid PIN");
-        } else {
-            System.out.println("Invalid PIN");
+    public static void twinpr() {
+        for (int i = 3; i < 100; i++) {
+            if (isPrime(i) && isPrime(i + 2)) {
+                System.out.println("(" + i + ", " + (i + 2) + ")");
+            }
         }
+    }
 
-        scanner.close();
+    public static void main(String[] args) {
+        System.out.println("Twin Prime Pairs:");
+        twinpr();
     }
 }
