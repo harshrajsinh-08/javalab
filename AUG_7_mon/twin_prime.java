@@ -1,6 +1,7 @@
+package AUG_7_mon;
 import java.util.Scanner;
 
-public class newww {
+public class twin_prime {
     public static boolean isPrime(int num) {
         if (num <= 1) {
             return false;
