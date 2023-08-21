@@ -1,3 +1,4 @@
+package AUG_21_mon;
 import java.util.Scanner;
 class Patient {
     private static int totalPatients = 0;
