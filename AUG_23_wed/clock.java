@@ -14,7 +14,7 @@ class Clock {
         seconds = secondsSinceMidnight % 60;
     }
     public Clock(int hours, int minutes, int seconds) {
-        setClock(hours, minutes, seconds);
+        // setClock(hours, minutes, seconds);
     }
 
     public Clock(int secondsSinceMidnight) {
