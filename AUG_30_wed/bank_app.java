@@ -67,7 +67,7 @@ class SavingsAccount extends Account {
     }
 }
 
-public class bank {
+public class bank_app {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         currentacc currentacc = new currentacc();
