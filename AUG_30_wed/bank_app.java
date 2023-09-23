@@ -177,8 +177,6 @@ public class bank_app {
                     sc.close();
                     System.exit(0);
 
-                default:
-                    System.out.println("Invalid choice. Please choose a valid option.");
             }
         }
     }
