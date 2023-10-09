@@ -9,6 +9,7 @@ class Answer {
     static String answer = "Programming with Java";
 
     static String submit(String question) {
+        System.out.println();
         return ("The answer to the guestion, " + question + " is " + answer);
     }
 }
