@@ -35,7 +35,7 @@ public class anm {
 
         do {
             System.out.print("Animal: ");
-            System.out.println("which animal do you want \n1)cat\n2)dog\n4)exit");
+            System.out.println("which animal do you want \n1)cat\n2)dog\n3)exit");
             choice = sc.nextInt();
 
             switch (choice) {
