@@ -80,7 +80,7 @@ class SavingsAccount extends Account {
 public class BankMen {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int maxAccounts = 10; // Maximum number of accounts
+        int maxAccounts = 10; 
         Account[] accounts = new Account[maxAccounts];
         int accountCount = 0;
 
@@ -97,7 +97,7 @@ public class BankMen {
             System.out.println("8. Exit");
             System.out.print("Enter your choice: ");
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume the newline
+            scanner.nextLine(); 
 
             switch (choice) {
                 case 1:
@@ -106,7 +106,7 @@ public class BankMen {
                         String name = scanner.nextLine();
                         System.out.print("Enter account number: ");
                         int accountNumber = scanner.nextInt();
-                        scanner.nextLine(); // Consume the newline
+                        scanner.nextLine(); 
                         CurrentAccount currentAccount = new CurrentAccount();
                         currentAccount.assignInitialValues(name, accountNumber, "Current");
                         accounts[accountCount] = currentAccount;
@@ -123,7 +123,7 @@ public class BankMen {
                         String name = scanner.nextLine();
                         System.out.print("Enter account number: ");
                         int accountNumber = scanner.nextInt();
-                        scanner.nextLine(); // Consume the newline
+                        scanner.nextLine(); 
                         SavingsAccount savingsAccount = new SavingsAccount();
                         savingsAccount.assignInitialValues(name, accountNumber, "Savings");
                         accounts[accountCount] = savingsAccount;
@@ -137,12 +137,12 @@ public class BankMen {
                 case 3:
                     System.out.print("Enter account number: ");
                     int depositAccountNumber = scanner.nextInt();
-                    scanner.nextLine(); // Consume the newline
+                    scanner.nextLine(); 
                     int depositAccountIndex = findAccountIndex(accounts, accountCount, depositAccountNumber);
                     if (depositAccountIndex != -1) {
                         System.out.print("Enter amount to deposit: ");
                         double depositAmount = scanner.nextDouble();
-                        scanner.nextLine(); // Consume the newline
+                        scanner.nextLine(); 
                         accounts[depositAccountIndex].deposit(depositAmount);
                     } else {
                         System.out.println("Account not found.");
@@ -152,12 +152,12 @@ public class BankMen {
                 case 4:
                     System.out.print("Enter account number: ");
                     int withdrawAccountNumber = scanner.nextInt();
-                    scanner.nextLine(); // Consume the newline
+                    scanner.nextLine(); 
                     int withdrawAccountIndex = findAccountIndex(accounts, accountCount, withdrawAccountNumber);
                     if (withdrawAccountIndex != -1) {
                         System.out.print("Enter amount to withdraw: ");
                         double withdrawAmount = scanner.nextDouble();
-                        scanner.nextLine(); // Consume the newline
+                        scanner.nextLine(); 
                         accounts[withdrawAccountIndex].withdraw(withdrawAmount);
                     } else {
                         System.out.println("Account not found.");
@@ -167,7 +167,7 @@ public class BankMen {
                 case 5:
                     System.out.print("Enter account number: ");
                     int balanceAccountNumber = scanner.nextInt();
-                    scanner.nextLine(); // Consume the newline
+                    scanner.nextLine(); 
                     int balanceAccountIndex = findAccountIndex(accounts, accountCount, balanceAccountNumber);
                     if (balanceAccountIndex != -1) {
                         accounts[balanceAccountIndex].displayBalance();
@@ -179,7 +179,7 @@ public class BankMen {
                 case 6:
                     System.out.print("Enter account number: ");
                     int interestAccountNumber = scanner.nextInt();
-                    scanner.nextLine(); // Consume the newline
+                    scanner.nextLine(); 
                     int interestAccountIndex = findAccountIndex(accounts, accountCount, interestAccountNumber);
                     if (interestAccountIndex != -1 && accounts[interestAccountIndex] instanceof SavingsAccount) {
                         ((SavingsAccount) accounts[interestAccountIndex]).depositInterest();
@@ -191,7 +191,7 @@ public class BankMen {
                 case 7:
                     System.out.print("Enter account number: ");
                     int checkBalanceAccountNumber = scanner.nextInt();
-                    scanner.nextLine(); // Consume the newline
+                    scanner.nextLine(); 
                     int checkBalanceAccountIndex = findAccountIndex(accounts, accountCount, checkBalanceAccountNumber);
                     if (checkBalanceAccountIndex != -1 && accounts[checkBalanceAccountIndex] instanceof CurrentAccount) {
                         ((CurrentAccount) accounts[checkBalanceAccountIndex]).checkMinimumBalance();
