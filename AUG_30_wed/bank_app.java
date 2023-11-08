@@ -70,7 +70,7 @@ class SavingsAccount extends Account {
 public class bank_app {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        currentacc currentacc = new currentacc();
+        currentacc crntacc = new currentacc();
         SavingsAccount savingsAccount = new SavingsAccount();
 
         while (true) {
@@ -94,7 +94,7 @@ public class bank_app {
                     System.out.print("Enter account number: ");
                     int accnum = sc.nextInt();
                     sc.nextLine();
-                    currentacc.initval(name, accnum, "Current");
+                    crntacc.initval(name, accnum, "Current");
                     System.out.println("Current account created.");
                     break;
 
@@ -115,7 +115,7 @@ public class bank_app {
                     System.out.print("Enter account type (Current/Savings): ");
                     String type = sc.nextLine();
                     if (type.equalsIgnoreCase("Current")) {
-                        currentacc.deposit(depositAmount);
+                        crntacc.deposit(depositAmount);
                     } else if (type.equalsIgnoreCase("Savings")) {
                         savingsAccount.deposit(depositAmount);
                     } else {
@@ -130,7 +130,7 @@ public class bank_app {
                     System.out.print("Enter account type (Current/Savings): ");
                     type = sc.nextLine();
                     if (type.equalsIgnoreCase("Current")) {
-                        currentacc.withdraw(withdrawAmount);
+                        crntacc.withdraw(withdrawAmount);
                     } else if (type.equalsIgnoreCase("Savings")) {
                         savingsAccount.withdraw(withdrawAmount);
                     } else {
@@ -142,7 +142,7 @@ public class bank_app {
                     System.out.print("Enter account type (Current/Savings): ");
                     type = sc.nextLine();
                     if (type.equalsIgnoreCase("Current")) {
-                        currentacc.displayBalance();
+                        crntacc.displayBalance();
                     } else if (type.equalsIgnoreCase("Savings")) {
                         savingsAccount.displayBalance();
                     } else {
@@ -165,8 +165,8 @@ public class bank_app {
                     System.out.print("Enter account number: ");
                     accnum = sc.nextInt();
                     sc.nextLine();
-                    if (currentacc.accnum == accnum) {
-                        currentacc.checkminblns();
+                    if (crntacc.accnum == accnum) {
+                        crntacc.checkminblns();
                     } else {
                         System.out.println("Account not found.");
                     }

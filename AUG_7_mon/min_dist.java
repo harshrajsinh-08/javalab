@@ -33,4 +33,4 @@ public class min_dist {
         System.out.println(minimumDistance);
     }
 }
-//23,56,78,90,20,55,23,55
+
