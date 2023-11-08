@@ -73,7 +73,7 @@ public class sportt {
                 default:
                     System.out.println("Enter valid option");
             }
-        } while (choice != 3);
+        } while (choice != 5);
     }
 
 }
