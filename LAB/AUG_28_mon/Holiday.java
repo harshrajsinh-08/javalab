@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 package AUG_28_mon;
 import java.util.Scanner;
 
@@ -74,4 +73,3 @@ public class Holiday {
         }
     }
 }
->>>>>>> 82327fd (Aug_28)

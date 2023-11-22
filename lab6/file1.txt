@@ -1,0 +1,9 @@
+hello
+this
+is 
+line 
+test 
+for the
+file 1
+counting number of lines
+so total is 9 lines for text 1

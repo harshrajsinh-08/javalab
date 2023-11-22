@@ -1,0 +1,5 @@
+hello
+this 
+is
+the line test
+total is 5 lines for file2
