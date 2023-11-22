@@ -1,0 +1,25 @@
+Given the following program, which statements are true?
+
+
+public class Exceptions {
+public static void main(String[] args) { try {
+if (args.length == 0) 
+return; 
+System.out.println(args[0]);
+} finally { System.out.println("The end");
+}
+}
+}
+
+Select the two correct answers.
+(a)	If run with no arguments, the program will produce no output.
+(b)	If run with no arguments, the program will print "The end".
+(c)	The program will throw an ArrayIndexOutOfBoundsException.
+(d)	If run with one argument, the program will simply print the given argument.
+(e)	If run with one argument, the program will print the given argument followed by "The end".
+
+
+
+Even if the program is executed without any arguments, the 'args' is NOT NULL. In such case it will be initialized to an array of Strings containing zero elements.
+
+2. The finally block is always executed, no matter how control leaves the try block. Only if, in a try or catch block, System.exit() is called then finally will not be executed.

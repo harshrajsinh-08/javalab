@@ -1,0 +1,13 @@
+hello
+this 
+is line 
+test 
+for 
+counting 
+number of
+lines 
+in a 
+file 
+and this file 
+contains 
+13 lines in total
